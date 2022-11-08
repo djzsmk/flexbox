@@ -96,16 +96,15 @@ textarea {
    ========================================================================== */
 
 html {
-  background-color: #000000;
+  background-color: #4d4c52;
   height: 100%;
   width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.35em;
+  font-size: 1.25em;
   padding: 0 2em;
-  height: 100%;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -115,13 +114,24 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: auto;
+    max-width: 1200px;
     
 }
 
-header {
-    font-size: 3em;
+p span {
+    font-family: 'Lora','Sans-serif';
+}
 
+header,
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+header h1{
+    font-family: 'Lora','Sans-serif';
+    font-size: 3em;
 }
 
 main {
@@ -132,8 +142,10 @@ main {
     
 }
 
+
+
 main p{
-    font-size: 1.25em;
+    font-size: 1.35em;
 }
 
 
@@ -148,12 +160,7 @@ main p{
      
 }
 
-header,
-footer {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-}
+
 
 footer {
     border-top: 1px solid white;
@@ -242,12 +249,26 @@ footer {
    ========================================================================== */
 
 /* If you'd like to try a different layout on Desktop and larger screens: */
-@media (min-width: 1200px) {
-    
-    .flex-items{
-        width: 400px;
+@media all and (max-width: 768px) {
+    body {
+        padding: 1em;
     }
-  
+}
+@media (min-width: 1200px) {
+
+      
+    .flex-items{
+       flex-basis: 30%;
+       border-bottom: none;
+          }
+
+    #div-2 p {
+        border-left: 1px solid #999;
+        border-right: 1px solid #999;
+        padding: 0 40px;
+        }
+    
+    
 }
 
 @media print,
